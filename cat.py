@@ -1,6 +1,8 @@
 import discord
 from discord.ext import commands
 
+startup_extensions = ["Docs"]
+
 bot = commands.Bot(command_prefix='c.', description='With the cats')
 
 @bot.event
@@ -23,6 +25,15 @@ async def userinfo(self, ctx):
     embed.add_field(name="UserName", value="{}".format(ctx.author.name), inline=False)
     embed.add_field(name="Status", value="{}".format(ctx.author.status), inline=False)
     await ctx.send(embed=embed)
+
+    
+if __name__ == '__main__':
+    for extension in startup_extensions:
+        try:
+            bot.load_extension(extension)
+        except Exception as e:
+            print('Failed to load {ex}'.format(ex=extension))
+            traceback.print_exc()
     
     
 bot.run('your_token_here')
