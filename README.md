@@ -1,2 +1,2 @@
 # Caty
-A Caty weebhook
+A Caty bot :)
