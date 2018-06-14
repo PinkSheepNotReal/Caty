@@ -1,2 +1,2 @@
 # Caty
-A Caty bot :)
+A bot for python begginers
