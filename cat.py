@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-startup_extensions = ["Docs"]
+startup_extensions = ["Docs" , "Cooldown"]
 
 bot = commands.Bot(command_prefix='c.', description='With the cats')
 
